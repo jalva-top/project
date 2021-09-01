@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app:
+    image: 'appname:project'
+    build:
+      context: .
+    container_name: app
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
