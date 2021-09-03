@@ -6,8 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import top.jalva.project.enums.Region;
-import top.jalva.project.domain.Regions;
+import top.jalva.project.domain.Region;
 import top.jalva.project.repo.RegionsRepo;
 
 import java.util.Arrays;
@@ -25,13 +24,13 @@ public class RegionsController {
     }
 
     @GetMapping("/regions")
-     ResponseEntity<List<Region>> regions() {
-        List<Region> regions = Arrays.asList(Region.values()).stream().collect(Collectors.toList());
+     ResponseEntity<List<top.jalva.project.enums.Region>> regions() {
+        List<top.jalva.project.enums.Region> regions = Arrays.asList(top.jalva.project.enums.Region.values()).stream().collect(Collectors.toList());
         return new ResponseEntity(regions, HttpStatus.OK);
     }
 
     @GetMapping("/regions/{id}")
-    ResponseEntity<Regions> region(@PathVariable String id) {
+    ResponseEntity<Region> region(@PathVariable String id) {
         return new ResponseEntity(repo.findById(id), HttpStatus.OK);
     }
 }

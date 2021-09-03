@@ -3,7 +3,7 @@ package top.jalva.project.domain;
 import lombok.Data;
 
 @Data
-public class Cities {
+public class City {
     Long id;
     String name;
     String type;
