@@ -1,9 +1,9 @@
 package top.jalva.project.domain;
 
-import lombok.Data;
+import lombok.Value;
 
-@Data
-public class City {
+@Value
+class City {
     Long id;
     String name;
     String type;
