@@ -1,6 +1,6 @@
 package top.jalva.project.enums;
 
-public enum Region {
+public enum RegionId {
 
     VINNYTSIA(0, "Вінницька", "Винницкая"),
 
@@ -56,7 +56,7 @@ public enum Region {
     String nameUa;
     String nameRu;
 
-    private Region(int index, String nameUa, String nameRu) {
+    RegionId(int index, String nameUa, String nameRu) {
         this.index = index;
         this.nameUa = nameUa;
         this.nameRu = nameRu;
@@ -72,14 +72,5 @@ public enum Region {
 
     public final String getNameRu() {
         return nameRu;
-    }
-
-    @Override
-    public String toString() {
-
-        if (this == CRIMEA)
-            return nameRu;
-        else
-            return nameRu + " обл.";
     }
 }
